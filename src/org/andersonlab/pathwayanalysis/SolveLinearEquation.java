@@ -1,8 +1,14 @@
-/*
- * Adapated from http://www.sanfoundry.com/java-program-solve-linear-equation/
- */
+
 package org.andersonlab.pathwayanalysis;
 
+/*
+ * This is java program to solve the system of linear equations. This can be 
+ * done by first representing equations(vectors) to matrix form, then finding 
+ * the inverse of the matrix formed by the coefficients of variable and 
+ * multiplying it with constants.
+ *
+ * Adapated from http://www.sanfoundry.com/java-program-solve-linear-equation/
+ */
 public class SolveLinearEquation {
 
     public double[] run(double[][] mat, double[] objective) throws Exception {

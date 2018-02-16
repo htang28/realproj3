@@ -4,14 +4,12 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import org.andersonlab.pathwayanalysis.model.Chem;
-import org.andersonlab.pathwayanalysis.model.Pathway;
-import org.andersonlab.pathwayanalysis.model.Rxn;
+import org.andersonlab.pathwayanalysis.model.*;
 import org.ucb.act.utils.ChemAxonUtils;
 import org.ucb.act.utils.FileUtils;
 
 /**
- *
+ * 
  * @author J. Christopher Anderson
  */
 public class PathwayBalancer {
