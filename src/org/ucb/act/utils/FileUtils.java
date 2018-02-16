@@ -1,19 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-package org.andersonlab.terminalolefins.utils;
+package org.ucb.act.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.io.Writer;
-
 
 /**
  * @author sixpi
@@ -131,6 +128,12 @@ public class FileUtils {
             throw e;
         }
 
-        return new String(content);    
+        return new String(content);    }
+
+    public static void writeResourceFile(String datafile, String relPath) throws Exception {
+        OutputStream os = new FileOutputStream(relPath);
+        final PrintStream printStream = new PrintStream(os);
+        printStream.println(datafile);
+        printStream.close();
     }
 }

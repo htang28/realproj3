@@ -1,24 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package org.andersonlab.terminalolefins.stoichiometry;
+package org.andersonlab.pathwayanalysis;
 
 import chemaxon.formats.MolImporter;
 import chemaxon.struc.Molecule;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import org.andersonlab.terminalolefins.stoichiometry.model.Chem;
-import org.andersonlab.terminalolefins.stoichiometry.model.Pathway;
-import org.andersonlab.terminalolefins.stoichiometry.model.Rxn;
-import org.andersonlab.terminalolefins.utils.ChemAxonUtils;
-import org.andersonlab.terminalolefins.utils.FileUtils;
+import org.andersonlab.pathwayanalysis.model.*;
+import org.ucb.act.utils.ChemAxonUtils;
+import org.ucb.act.utils.FileUtils;
 
 /**
  *

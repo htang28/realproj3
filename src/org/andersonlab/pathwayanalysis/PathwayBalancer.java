@@ -1,14 +1,14 @@
-package org.andersonlab.terminalolefins.stoichiometry;
+package org.andersonlab.pathwayanalysis;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import org.andersonlab.terminalolefins.stoichiometry.model.Chem;
-import org.andersonlab.terminalolefins.stoichiometry.model.Pathway;
-import org.andersonlab.terminalolefins.stoichiometry.model.Rxn;
-import org.andersonlab.terminalolefins.utils.ChemAxonUtils;
-import org.andersonlab.terminalolefins.utils.FileUtils;
+import org.andersonlab.pathwayanalysis.model.Chem;
+import org.andersonlab.pathwayanalysis.model.Pathway;
+import org.andersonlab.pathwayanalysis.model.Rxn;
+import org.ucb.act.utils.ChemAxonUtils;
+import org.ucb.act.utils.FileUtils;
 
 /**
  *

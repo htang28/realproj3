@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package org.andersonlab.terminalolefins.stoichiometry.model;
+package org.andersonlab.pathwayanalysis.model;
 
 /**
  *

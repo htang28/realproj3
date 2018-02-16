@@ -1,7 +1,7 @@
 /*
  * Adapated from 
  */
-package org.andersonlab.terminalolefins.stoichiometry;
+package org.andersonlab.pathwayanalysis;
 
 import java.util.Calendar;
 import java.util.Date;
