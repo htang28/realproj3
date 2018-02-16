@@ -1,0 +1,1 @@
+@name:	Abstract Pathway		@inputs:A		@outputs:D		@reactions:3 A --> B2 B --> CB + C --> D	@chemicals:A	nullB	nullC	nullD	null
