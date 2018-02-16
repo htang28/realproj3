@@ -118,7 +118,8 @@ public class PathwayBalancer {
         }
         
         //Solve to get coefficients on each reaction
-        double[] result = Solve_Linear_Equation.solve(stoichMatrix, objectiveFunc);
+        SolveLinearEquation sle = new SolveLinearEquation();
+        double[] result = sle.run(stoichMatrix, objectiveFunc);
         
         //Find the multiplier that converts the coefficients to integers
         int multiplier = 1;
@@ -138,7 +139,7 @@ public class PathwayBalancer {
             }
         }
         
-        //Reexoress the coefficients as integers
+        //Reinterpret the coefficients as integers
         int[] rxnCoeffs = new int[result.length];
         for(int i=0; i<rxnCoeffs.length; i++) {
             rxnCoeffs[i] = 0;
@@ -215,7 +216,7 @@ public class PathwayBalancer {
         
         //Validate the pathway
         ChemAxonUtils.license();
-        PathwayValidator validator = new PathwayValidator();
+        MassValidator validator = new MassValidator();
         boolean result = validator.run(path);
         System.out.println("\nDoes the pathway pass mass balance validation on each reaction?");
         System.out.println(result);

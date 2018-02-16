@@ -7,10 +7,14 @@ import org.ucb.act.utils.ChemAxonUtils;
 import org.ucb.act.utils.FileUtils;
 
 /**
- *
+ * A Function that validates each reaction in a pathway for mass balance.
+ * This is necessary to validate the stoichiometric coefficients on
+ * each reaction.  This returns true if all reactions in the pathway
+ * are OK.
+ * 
  * @author J. Christopher Anderson
  */
-public class PathwayValidator {
+public class MassValidator {
     
     public boolean run(Pathway path) throws Exception {
         //Are all the reactions balanced?
@@ -65,7 +69,7 @@ public class PathwayValidator {
         Pathway path = parser.run(data);
         
         //Test validation
-        PathwayValidator validator = new PathwayValidator();
+        MassValidator validator = new MassValidator();
         boolean result = validator.run(path);
         System.out.println(result);
     }

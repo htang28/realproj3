@@ -58,11 +58,6 @@ public class PathwayParser {
             throw err;
         }
         
-//        for(String name : chemicals.keySet()) {
-//            System.out.println(name);
-//            System.out.println(chemicals.get(name).getInchi());
-//        }
-        
         //Handle the inputs
         Set<Chem> inputs = new HashSet<>();
         try {
@@ -80,10 +75,6 @@ public class PathwayParser {
             System.err.println("Error processing the inputs");
             throw err;
         }
-        
-//        for(Chem chem : inputs) {
-//            System.out.println(chem.getInchi());
-//        }
         
         //Handle the outputs
         Set<Chem> outputs = new HashSet<>();
@@ -103,17 +94,12 @@ public class PathwayParser {
             throw err;
         }
         
-//        for(Chem chem : outputs) {
-//            System.out.println(chem.getInchi());
-//        }
-        
         //Handle the name
         String name = labelToText.get("name");
         if(name == null) {
             System.err.println("Could not parse name");
             throw new Exception();
         }
-//        System.out.println(name);
         
         //Handle the reactions
         List<Rxn> reactions = new ArrayList<>();
@@ -145,29 +131,6 @@ public class PathwayParser {
             System.err.println("Error processing the reactions");
             throw err;
         }
-        
-//        for(Rxn rxn : reactions) {
-//            Map<Chem, Integer> subs = rxn.getSubstrates();
-//            System.out.println("Substrates: " + subs.size());
-//            for(Chem achem : subs.keySet()) {
-//                int stoich = subs.get(achem);
-//                System.out.print(stoich);
-//                System.out.print("*");
-//                System.out.print(achem.getName());
-//                System.out.print(", ");
-//            }
-//            System.out.println();
-//            Map<Chem, Integer> pdts = rxn.getProducts();
-//            System.out.println("Products: " + pdts.size());
-//            for(Chem achem : pdts.keySet()) {
-//                int stoich = pdts.get(achem);
-//                System.out.print(stoich);
-//                System.out.print("*");
-//                System.out.print(achem.getName());
-//                System.out.print(", ");
-//            }
-//            System.out.println("\n");
-//        }
         
         Pathway pathway = new Pathway(name, inputs, outputs, reactions, chemicals);
         return pathway;

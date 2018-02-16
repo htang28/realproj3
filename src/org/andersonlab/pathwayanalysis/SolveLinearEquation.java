@@ -1,14 +1,11 @@
 /*
- * Adapated from 
+ * Adapated from http://www.sanfoundry.com/java-program-solve-linear-equation/
  */
 package org.andersonlab.pathwayanalysis;
 
-import java.util.Calendar;
-import java.util.Date;
+public class SolveLinearEquation {
 
-public class Solve_Linear_Equation {
-
-    public static double[] solve(double[][] mat, double[] objective) {
+    public double[] run(double[][] mat, double[] objective) throws Exception {
         int n = objective.length;
         
         //Zero out a constants array
@@ -45,7 +42,7 @@ public class Solve_Linear_Equation {
         return out;
     }
 
-    private static double[][] invert(double a[][]) {
+    private double[][] invert(double a[][]) {
         int n = a.length;
         double x[][] = new double[n][n];
         double b[][] = new double[n][n];
@@ -83,7 +80,7 @@ public class Solve_Linear_Equation {
 
 // Method to carry out the partial-pivoting Gaussian
 // elimination.  Here index[] stores pivoting order.
-    private static void gaussian(double a[][], int index[]) {
+    private void gaussian(double a[][], int index[]) {
         int n = index.length;
         double c[] = new double[n];
 
@@ -135,37 +132,8 @@ public class Solve_Linear_Equation {
         }
     }
     
-    private static void runOne(int n) {
-        double[][] mat = new double[n][n];
-        double[] constants = new double[n];
-
-        //input
-        for (int i = 0; i < n; i++) {
-            constants[i] = Math.random();
-            for (int j = 0; j < n; j++) {
-                mat[i][j] = Math.random();
-            }
-        }
-
-            long millisStart = new Date().getTime();
-        double[] result = solve(mat, constants);
-            long millisEnd = new Date().getTime();
-            long duration = millisEnd - millisStart;
-        System.out.println(n + "\t" + duration);
-
-    }
-
-    public static void main(String args[]) {
-        
+    public static void main(String args[]) throws Exception {
         int n = 3;
-        
-        //Enter the coefficients of each variable for each equations
-        //ax + by + cz + ... = d
-        
-        //This is to examine scaling, it's roughly worse than n^2
-//        for(int i=0; i<1000; i++) {
-//            runOne(i);
-//        }
         
         double[][] mat = new double[n][n];
         double[] constants = new double[n];
@@ -177,7 +145,8 @@ public class Solve_Linear_Equation {
         
         constants = new double[] {0, 0, 6};
        
-        double[] result = solve(mat, constants);
+        SolveLinearEquation sle = new SolveLinearEquation();
+        double[] result = sle.run(mat, constants);
         
         System.out.println("The solution is:");
         for (int i = 0; i < n; i++) {
