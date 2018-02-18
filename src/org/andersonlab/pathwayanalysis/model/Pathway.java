@@ -13,14 +13,14 @@ public class Pathway {
     private final  Set<Chem> inputs;
     private final  Set<Chem> outputs;
     private final  List<Rxn> reactions;
-    private final  Map<String, Chem> chemicals;
+    private final  Map<String, Chem> nameToChem;
 
     public Pathway(String name, Set<Chem> inputs, Set<Chem> outputs, List<Rxn> reactions, Map<String, Chem> chemicals) {
         this.name = name;
         this.inputs = inputs;
         this.outputs = outputs;
         this.reactions = reactions;
-        this.chemicals = chemicals;
+        this.nameToChem = chemicals;
     }
 
     public String getName() {
@@ -40,6 +40,6 @@ public class Pathway {
     }
 
     public Map<String, Chem> getChemicals() {
-        return chemicals;
+        return nameToChem;
     }
 }
