@@ -168,7 +168,7 @@ public class PathwayParser {
     public static void main(String[] args) throws Exception {
         PathwayParser parser = new PathwayParser();
         String data = FileUtils.readFile("/Users/jca20n/TerminalOlefins/data/glycolysis.txt");
-//        System.out.println(data);
+
         Pathway path = parser.run(data);
         
         System.out.println(path.getName());
