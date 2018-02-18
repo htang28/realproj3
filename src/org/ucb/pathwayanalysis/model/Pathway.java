@@ -1,4 +1,4 @@
-package org.andersonlab.pathwayanalysis.model;
+package org.ucb.pathwayanalysis.model;
 
 import java.util.List;
 import java.util.Map;

@@ -1,8 +1,10 @@
-package org.andersonlab.pathwayanalysis;
+package org.ucb.pathwayanalysis;
 
+import org.ucb.pathwayanalysis.model.Chem;
+import org.ucb.pathwayanalysis.model.Rxn;
+import org.ucb.pathwayanalysis.model.Pathway;
 import chemaxon.formats.MolImporter;
 import chemaxon.struc.Molecule;
-import org.andersonlab.pathwayanalysis.model.*;
 import org.ucb.act.utils.ChemAxonUtils;
 import org.ucb.act.utils.FileUtils;
 

@@ -1,5 +1,5 @@
 
-package org.andersonlab.pathwayanalysis;
+package org.ucb.pathwayanalysis;
 
 /*
  * This is java program to solve the system of linear equations. This can be 

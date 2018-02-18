@@ -1,4 +1,4 @@
-package org.andersonlab.pathwayanalysis.model;
+package org.ucb.pathwayanalysis.model;
 
 /**
  *

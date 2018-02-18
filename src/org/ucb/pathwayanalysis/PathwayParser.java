@@ -1,10 +1,10 @@
 
-package org.andersonlab.pathwayanalysis;
+package org.ucb.pathwayanalysis;
 
 import java.util.ArrayList;
-import org.andersonlab.pathwayanalysis.model.Rxn;
-import org.andersonlab.pathwayanalysis.model.Pathway;
-import org.andersonlab.pathwayanalysis.model.Chem;
+import org.ucb.pathwayanalysis.model.Rxn;
+import org.ucb.pathwayanalysis.model.Pathway;
+import org.ucb.pathwayanalysis.model.Chem;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
