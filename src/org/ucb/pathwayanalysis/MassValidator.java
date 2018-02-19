@@ -47,6 +47,7 @@ public class MassValidator {
                     System.out.println("Unable to parse:");
                     System.out.println(achem.getName());
                     System.out.println(achem.getInchi());
+                    throw err;
                 }
                 pdtsMw += stoich*mol.getExactMass();
             }
